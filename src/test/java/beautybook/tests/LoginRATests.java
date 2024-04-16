@@ -8,8 +8,8 @@ import static io.restassured.RestAssured.given;
 public class LoginRATests extends TestBase{
 
     LoginRequestDto login = LoginRequestDto.builder()
-            .email("roehm.natalia@gmail.com")
-            .hashPassword("Qwerty123!")
+            .email("nm@gm.com")
+            .hashPassword("Qwert!1234")
             .build();
 
     @Test
