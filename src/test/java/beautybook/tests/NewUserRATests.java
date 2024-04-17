@@ -11,7 +11,7 @@ public class NewUserRATests extends TestBase{
     NewUserDto userDto = NewUserDto.builder()
             .firstName("Sweta")
             .lastName("Petja")
-            .email("jhkf@gmail.com")
+            .email("sweta@gmail.com")
             .hashPassword("Hh12345$")
             .role("MASTER")
             .build();
@@ -106,6 +106,4 @@ public class NewUserRATests extends TestBase{
                 .then()
                 .assertThat().statusCode(400);
     }
-
-
 }
