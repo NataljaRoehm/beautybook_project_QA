@@ -11,7 +11,5 @@ import java.util.List;
 @ToString
 @Builder
 public class AllUsersDto {
-
     private List<UserDto> users;
-
 }

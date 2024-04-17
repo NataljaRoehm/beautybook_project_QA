@@ -10,4 +10,5 @@ import lombok.ToString;
 @ToString
 @Builder
 public class MessageDto {
+    private String message;
 }

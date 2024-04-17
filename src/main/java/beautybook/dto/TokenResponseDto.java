@@ -9,6 +9,6 @@ import lombok.ToString;
 @Setter
 @ToString
 @Builder
-public class RefreshRequestDto {
-    private String refreshToken;
+public class TokenResponseDto {
+    private String accessToken;
 }
