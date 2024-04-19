@@ -1,4 +1,5 @@
 package beautybook.tests;
+
 import beautybook.dto.NewUserDto;
 import beautybook.tests.TestBase;
 import io.restassured.http.ContentType;
@@ -36,11 +37,11 @@ public class DeleteUsersByIdTests extends TestBase {
         if (message.contains("id")) {
             id = response.path("id").toString();
         } else {
-            // Обработка случая, когда message не содержит необходимые данные
             throw new RuntimeException("Не удалось получить ID пользователя из ответа сервера");
         }
     }
-// positive test
+
+    // positive test
     @Test
     public void deleteUserByIdSuccessTest() {
         if (id != null) {
