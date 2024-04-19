@@ -8,28 +8,9 @@ import static io.restassured.RestAssured.given;
 
 public class GetUserByIdRATests extends TestBase{
     @Test
-//    public void getUsersByIdSuccessTest() {
-//        AllUsersDto usersDto = given()
-//                .header(AUTH, token)
-//                .when()
-//                .get("users/3")
-//                .then()
-//                .assertThat().statusCode(200)
-//                .extract().response().as(AllUsersDto.class);
-//
-//        for (UserDto user : usersDto.getUsers()) {
-//            assertThat(user.getId(), equalTo(3));
-//            assertThat(user.getFirstName(), notNullValue());
-//            System.out.println(user.getId() + " ******* " + user.getFirstName());
-//            System.out.println("================");
-//        }
-//        for (UserDto user: usersDto.getUsers()){
-//            System.out.println(user.getId() + " ******* " + user.getFirstName());
-//            System.out.println("================");
-//        } // NullPointerException
-//    }
+
     public void getUserByIdSuccessTest() {
-        int targetUserId = 5;
+        int targetUserId = 8;
         Response response = given()
                 .header(AUTH, token)
                 .when()
