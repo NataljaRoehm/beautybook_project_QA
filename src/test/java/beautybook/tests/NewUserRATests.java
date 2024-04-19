@@ -9,16 +9,16 @@ public class NewUserRATests extends TestBase{
 
     //Positives Test
     NewUserDto userDto = NewUserDto.builder()
-            .firstName("Sweta")
-            .lastName("Petja")
-            .email("sweta@gmail.com")
-            .hashPassword("Hh12345$")
+            .firstName("Katja")
+            .lastName("Petrova")
+            .email("katja@gmail.com")
+            .hashPassword("Katja145$")
             .role("MASTER")
             .build();
 
     @Test
     public void newUserSuccessTest(){
-       given()
+        given()
                 .contentType("application/json")
                 .body(userDto)
                 .when()
@@ -30,13 +30,13 @@ public class NewUserRATests extends TestBase{
     // Negatives Test NotValidFirstname
     NewUserDto userNotValidFirstname = NewUserDto.builder()
             .firstName("12as")
-            .lastName("Petja")
-            .email("jhkf@gmail.com")
+            .lastName("Petrova")
+            .email("katja@gmail.com")
             .hashPassword("Hh12345$")
             .role("MASTER")
             .build();
 
-       @Test
+    @Test
     public void userNotValidFirstnameTest() {
         given()
                 .contentType("application/json")
@@ -44,14 +44,14 @@ public class NewUserRATests extends TestBase{
                 .when()
                 .post("users/register")
                 .then()
-                .assertThat().statusCode(400);
+                .assertThat().statusCode(409);
     }
 
     // Negatives Test NotValidLastname
     NewUserDto userNotValidLastname = NewUserDto.builder()
-            .firstName("Sweta")
+            .firstName("Katja")
             .lastName("123ja")
-            .email("jhkf@gmail.com")
+            .email("katja@gmail.com")
             .hashPassword("Hh12345$")
             .role("MASTER")
             .build();
@@ -64,14 +64,14 @@ public class NewUserRATests extends TestBase{
                 .when()
                 .post("users/register")
                 .then()
-                .assertThat().statusCode(400);
+                .assertThat().statusCode(409);
     }
 
     // Negatives Test NotValidEmail
     NewUserDto userNotValidEmail = NewUserDto.builder()
-            .firstName("Sweta")
-            .lastName("Petja")
-            .email("jhk34gmail.com")
+            .firstName("Katja")
+            .lastName("Petrova")
+            .email("katjagmail.com")
             .hashPassword("Hh12345$")
             .role("MASTER")
             .build();
@@ -84,14 +84,14 @@ public class NewUserRATests extends TestBase{
                 .when()
                 .post("users/register")
                 .then()
-                .assertThat().statusCode(409);
+                .assertThat().statusCode(400);
     }
 
     // Negatives Test NotValidPassword
     NewUserDto userNotValidPassword = NewUserDto.builder()
-            .firstName("Sweta")
-            .lastName("Petja")
-            .email("jhk34gmail.com")
+            .firstName("Katja")
+            .lastName("Petrova")
+            .email("katja@gmail.com")
             .hashPassword("H")
             .role("MASTER")
             .build();

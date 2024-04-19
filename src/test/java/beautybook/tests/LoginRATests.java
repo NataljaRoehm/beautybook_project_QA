@@ -4,16 +4,18 @@ import beautybook.dto.ErrorDto;
 import beautybook.dto.LoginRequestDto;
 import beautybook.dto.TokenResponseDto;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
 public class LoginRATests extends TestBase {
 
     // Positive Test
     LoginRequestDto login = LoginRequestDto.builder()
-            .email("sweta@gmail.com")
-            .hashPassword("Hh12345$")
+            .email("petja@mail.com")
+            .hashPassword("Pwerty007!")
             .build();
 
     @Test
@@ -30,32 +32,26 @@ public class LoginRATests extends TestBase {
     }
 
     //Negative Tests
-//    LoginRequestDto loginNotValidEmail = LoginRequestDto.builder()
-//            .email("nmgm.com")
-//            .hashPassword("Qwert!1234")
-//            .build();
-
     @Test
-    public void loginNotValidEmailTest() {
-       ErrorDto errorDto = given()
-               .contentType(ContentType.JSON)
-                //.contentType("application/json")
-               .body(LoginRequestDto.builder()
-                       .email("swetagmail.com")
-                       .hashPassword("Hh12345$")
-                       .build())
-                //.body(loginNotValidEmail)
+    public void invalidEmailFormatTest() {
+        Response response = given()
+                .contentType(ContentType.JSON)
+                .body(LoginRequestDto.builder()
+                        .email("petja@mail.")
+                        .hashPassword("Pwerty007!")
+                        .build())
                 .when()
-                .post("auth/login")
-                .then()
-                .assertThat().statusCode(400)
-               .extract().response().as(ErrorDto.class);
-        System.out.println(errorDto.getErrors() + " **** " + errorDto.getMessage());
+                .post("auth/login");
+
+        response.then().statusCode(400);
+
+        response.then().body("errors[0].field", equalTo("email"));
+        response.then().body("errors[0].rejectedValue", equalTo("petja@mail."));
+        response.then().body("errors[0].message", equalTo("Invalid email format"));
     }
 
-    //Negative Tests
     LoginRequestDto loginNotValidPassword = LoginRequestDto.builder()
-            .email("sweta@gmail.com")
+            .email("petja@mail.com")
             .hashPassword(" 2")
             .build();
 

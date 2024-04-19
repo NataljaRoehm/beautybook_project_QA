@@ -10,22 +10,7 @@ import static io.restassured.RestAssured.given;
 public class GetAllUsersRATests extends TestBase{
 
     @Test
-//    public void getAllUsersSuccessTest() {
-//        AllUsersDto allUsersDto = given()
-//                .header(AUTH, token)
-//                .when()
-//                .get("users")
-//                .then()
-//                .assertThat().statusCode(200)
-//                .extract().response().as(AllUsersDto.class);
-//
-//        for (UserDto user: allUsersDto.getUsers()){
-//            System.out.println(user.getId() + " ***** " + user.getFirstName());
-//            System.out.println("================");
-//        }
-//    }
-
-    public void getAllUsersSuccessTest() {
+       public void getAllUsersSuccessTest() {
         Response response = given()
                 .header(AUTH, token)
                 .when()
