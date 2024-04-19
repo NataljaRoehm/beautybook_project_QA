@@ -10,7 +10,7 @@ import lombok.ToString;
 @ToString
 @Builder
 public class ErrorDto {
-    private String errors;
+    private String error;
     private String message;
 
 }

@@ -1,7 +1,6 @@
 package beautybook.tests;
 
 import beautybook.dto.NewUserDto;
-import beautybook.tests.TestBase;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.BeforeMethod;
@@ -9,7 +8,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class DeleteUsersByIdTests extends TestBase {
+public class DeleteUsersByIdRATests extends TestBase {
     String id;
 
     @BeforeMethod
