@@ -1,4 +1,4 @@
-package beautybook.dto.procedure;
+package beautybook.dto.category;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -9,8 +9,7 @@ import lombok.ToString;
 @Getter
 @ToString
 @Builder
-public class ProcedureDto {
+public class CategoryDto {
     private int id;
     private String name;
-    private Double price;
 }

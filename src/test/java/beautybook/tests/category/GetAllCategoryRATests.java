@@ -1,26 +1,25 @@
-package beautybook.tests.procedure;
+package beautybook.tests.category;
 
-import beautybook.dto.procedure.ProcedureDto;
+import beautybook.dto.category.CategoryDto;
 import beautybook.tests.TestBase;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class GetAllProcedureRATests extends TestBase {
+public class GetAllCategoryRATests extends TestBase {
 
-    // Позитивный тест
     @Test
-    public void getAllProceduresSuccessTest() {
+    public void getAllCategoriesSuccessTest() {
         Response response = given()
                 .header(AUTH, token)
                 .when()
-                .get("procedures");
+                .get("categories");
 
         if (response.statusCode() == 200) {
-            ProcedureDto[] procedures = response.as(ProcedureDto[].class);
-            for (ProcedureDto procedure : procedures) {
-                System.out.println(procedure.getId() + " *** " + procedure.getName());
+            CategoryDto[] categories = response.as(CategoryDto[].class);
+            for (CategoryDto category : categories) {
+                System.out.println(category.getId() + " *** " + category.getName());
                 System.out.println("================");
             }
         } else {
