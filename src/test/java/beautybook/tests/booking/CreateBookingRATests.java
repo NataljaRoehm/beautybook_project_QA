@@ -20,7 +20,7 @@ public class CreateBookingRATests extends TestBase {
                 .dateTime("2024-05-16T10:00:00")
                 .build();
 
-             Response response = given()
+        Response response = given()
                 .header(AUTH, token)
                 .body(bookingDto)
                 .contentType(ContentType.JSON)
@@ -28,7 +28,6 @@ public class CreateBookingRATests extends TestBase {
                 .post("/bookings")
                 .then()
                 .assertThat().statusCode(201)
-               // .assertThat().body("message", containsString("Booking was successfully created"))
                 .extract().response();
 
         int bookingId = response.jsonPath().getInt("id");

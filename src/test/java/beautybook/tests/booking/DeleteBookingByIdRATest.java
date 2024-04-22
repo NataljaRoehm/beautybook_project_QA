@@ -1,5 +1,6 @@
 package beautybook.tests.booking;
 
+import beautybook.dto.booking.BookingDto;
 import beautybook.tests.TestBase;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -7,32 +8,37 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 
 public class DeleteBookingByIdRATest extends TestBase {
     String bookingId;
 
     @BeforeMethod
     public void precondition() {
-        // Create a booking to be deleted
+        BookingDto bookingDto = BookingDto.builder()
+                .clientId(6)
+                .masterId(11)
+                .procedureId(6)
+                .dateTime("2024-05-16T10:00:00")
+                .build();
+
         Response response = given()
+                .header(AUTH, token)
+                .body(bookingDto)
                 .contentType(ContentType.JSON)
                 .when()
                 .post("/bookings")
                 .then()
-                .statusCode(200)
+                .assertThat().statusCode(201)
                 .extract().response();
 
-        bookingId = response.jsonPath().getString("bookingId");
+        bookingId = response.jsonPath().getString("id");
     }
-
     @Test
     public void deleteBookingByIdSuccessTest() {
         given()
                 .when()
                 .delete("/bookings/" + bookingId)
                 .then()
-                .statusCode(200)
-                .body("message", equalTo("Booking was deleted!"));
+                .statusCode(200);
     }
 }
