@@ -17,11 +17,5 @@ public class BookingDto {
     private int masterId;
     private int procedureId;
     private String status;
+    private String dateTime;
 }
-//id	[...]
-//userId*	[...]
-//clientId*	[...]
-//masterId*	[...]
-//procedureId*	[...]
-//status*	[...]
-//dateTime*
