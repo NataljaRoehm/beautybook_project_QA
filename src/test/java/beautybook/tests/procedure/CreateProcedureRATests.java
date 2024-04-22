@@ -9,12 +9,12 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 public class CreateProcedureRATests extends TestBase {
-    // Позитивный тест: создание процедуры
+    // Позитивный тест:
     @Test
     public void createProcedurePositiveTest() {
 
         ProcedureDto procedureDto = ProcedureDto.builder()
-                .name("Mлsage")
+                .name("Massage12")
                 .price (26.0)
                 .build();
 
@@ -27,8 +27,6 @@ public class CreateProcedureRATests extends TestBase {
                 .then()
                 .assertThat().statusCode(201)
                 .extract().response();
-
-
 
         //@Test
         //    public void testCreateCategorySuccess() {
