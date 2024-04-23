@@ -14,12 +14,12 @@ public class CreateProcedureRATests extends TestBase {
     public void createProcedurePositiveTest() {
 
         ProcedureDto procedureDto = ProcedureDto.builder()
-                .name("Massage12")
+                .name("Masage")
                 .price (26.0)
                 .build();
 
         Response response = given()
-                .header(AUTH, token)
+              //  .header(AUTH, token)
                 .body(procedureDto)
                 .contentType(ContentType.JSON)
                 .when()
@@ -27,35 +27,5 @@ public class CreateProcedureRATests extends TestBase {
                 .then()
                 .assertThat().statusCode(201)
                 .extract().response();
-
-        //@Test
-        //    public void testCreateCategorySuccess() {
-        //
-        //        CategoryDto categoryDto = CategoryDto.builder()
-        //                .name("Massage")
-        //                .build();
-        //
-        //        Response response = given()
-        //                .header(AUTH, token)
-        //                .body(categoryDto)
-        //                .contentType(ContentType.JSON)
-        //                .when()
-        //                .post("categories")
-        //                .then()
-        //                .assertThat().statusCode(201)
-        //                .extract().response();
-        //    }
-        //MessageDto message = given()
-        //                .header(AUTH, token)
-        //                .body(contactDto)
-        //                .contentType(ContentType.JSON)
-        //                .when()
-        //                .post("contacts")
-        //                .then()
-        //                .assertThat().statusCode(200)
-        //                .assertThat().body("message",containsString("Contact was added!"))
-        //                .extract().response().as(MessageDto.class);
-        //        System.out.println(message.getMessage());
     }
-
 }
