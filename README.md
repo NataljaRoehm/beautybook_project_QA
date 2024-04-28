@@ -38,8 +38,8 @@ Jenkins is integrated into the BeautyBook project's CI/CD pipeline to automate t
 * **Create Pull Request**: Merge your changes into the main branch via a pull request.
 
 ## Additional Links:
-* Swagger API Documentation: Swagger UI
-* Frontend Application: BeautyBook Frontend
+* Swagger API Documentation: https://beauty-project-ki2b5.ondigitalocean.app/swagger-ui/index.html#/
+* Frontend Application: https://beaty-project-2-0-dwyu.vercel.app/
 
 ## Contributing:
 Contributions to the BeautyBook project are welcome! Please follow the project's contribution guidelines and code of conduct.
