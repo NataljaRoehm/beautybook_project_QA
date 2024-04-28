@@ -7,9 +7,9 @@ _The BeautyBook project QA process encompasses various tools and practices to en
 This document outlines the tools used, project structure, and instructions for contributing to the project._
 
 ## Tools Used:
-* **Jira**: Project management, issue tracking, and agile development.**
-* **TestLink**: Test case management, test plan creation, and test execution tracking.
-* **MindMap**: Visualizing project structure, test plans, and test coverage.
+* **Jira**: Project management, issue tracking, and agile development.**https://aleksandracheidze.atlassian.net/jira/software/projects/BEUT/boards/1
+* **TestLink**: Test case management, test plan creation, and test execution tracking. https://testlink.ait-tr.de/index.php?caller=login&viewer=
+* **MindMap**: Visualizing project structure, test plans, and test coverage.https://drive.mindmup.com/map/1TnzZIRMjHBj9fccOW7N7AGMRhHfi_jqG
 * **API Testing**: Conducting API tests using specialized frameworks and tools.
 * **Jenkins**: Integration for continuous integration and delivery, automating the build, test, and deployment processes.
 * .**idea**: Directory containing project-specific settings for IntelliJ IDEA.
