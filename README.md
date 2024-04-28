@@ -1,10 +1,10 @@
 # **BeautyBook Project QA**
-    This README provides This README provides comprehensive information on the BeautyBook project's QA process, tools, 
-    and integration with Jenkins for continuous integration and delivery (CI/CD).
+This README provides This README provides comprehensive information on the BeautyBook project's QA process, tools, 
+and integration with Jenkins for continuous integration and delivery (CI/CD).
 
 ### Overview:
-    The BeautyBook project QA process encompasses various tools and practices to ensure the quality and reliability of the software product. 
-    This document outlines the tools used, project structure, and instructions for contributing to the project.
+The BeautyBook project QA process encompasses various tools and practices to ensure the quality and reliability of the software product. 
+This document outlines the tools used, project structure, and instructions for contributing to the project.
 
 #### Tools Used:
 * **Jira**: Project management, issue tracking, and agile development.**
