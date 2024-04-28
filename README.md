@@ -2,11 +2,11 @@
 This README provides This README provides comprehensive information on the BeautyBook project's QA process, tools, 
 and integration with Jenkins for continuous integration and delivery (CI/CD).
 
-### Overview:
-The BeautyBook project QA process encompasses various tools and practices to ensure the quality and reliability of the software product. 
-This document outlines the tools used, project structure, and instructions for contributing to the project.
+## Overview:
+_The BeautyBook project QA process encompasses various tools and practices to ensure the quality and reliability of the software product. 
+This document outlines the tools used, project structure, and instructions for contributing to the project._
 
-#### Tools Used:
+## Tools Used:
 * **Jira**: Project management, issue tracking, and agile development.**
 * **TestLink**: Test case management, test plan creation, and test execution tracking.
 * **MindMap**: Visualizing project structure, test plans, and test coverage.
@@ -14,7 +14,7 @@ This document outlines the tools used, project structure, and instructions for c
 * **Jenkins**: Integration for continuous integration and delivery, automating the build, test, and deployment processes.
 * .**idea**: Directory containing project-specific settings for IntelliJ IDEA.
 
-##   Project Structure:
+## Project Structure:
 * **src**: Source code directory containing project files.
 * **gradle/wrapper**: Contains Gradle wrapper files for project build automation.
 * .**gitignore**: Specifies intentionally untracked files to be ignored by Git.
