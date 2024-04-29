@@ -11,7 +11,7 @@ public class TestBase {
     @BeforeMethod
     public void init() {
 
-        RestAssured.baseURI = "https://beauty-project-ki2b5.ondigitalocean.app/swagger-ui/index.html#/";
+        RestAssured.baseURI = "https://beauty-project-ki2b5.ondigitalocean.app";
         RestAssured.basePath = "api";
 
     }

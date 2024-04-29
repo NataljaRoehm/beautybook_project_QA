@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 public class NewUserRATests extends TestBase{
-
     //Positives Test
     NewUserDto userDto = NewUserDto.builder()
             .firstName("Sascha")
@@ -23,8 +22,8 @@ public class NewUserRATests extends TestBase{
                 .body(userDto)
                 .when()
                 .post("users/register")
-                .then();
-                //.assertThat().statusCode(201);
+                .then()
+                .assertThat().statusCode(201);
     }
 
     // Negatives Test NotValidFirstname
