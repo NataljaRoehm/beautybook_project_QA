@@ -40,6 +40,7 @@ Jenkins is integrated into the BeautyBook project's CI/CD pipeline to automate t
 ## Additional Links:
 * Swagger API Documentation: https://beauty-project-ki2b5.ondigitalocean.app/swagger-ui/index.html#/
 * Frontend Application: https://beaty-project-2-0-dwyu.vercel.app/
+* Backend Application: https://github.com/d-naumov/beauty_project_back
 
 ## Contributing:
 Contributions to the BeautyBook project are welcome! Please follow the project's contribution guidelines and code of conduct.
