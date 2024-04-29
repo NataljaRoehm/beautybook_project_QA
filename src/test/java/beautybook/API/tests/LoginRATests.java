@@ -13,8 +13,8 @@ public class LoginRATests extends TestBase {
 
     // Positive Test
     LoginRequestDto login = LoginRequestDto.builder()
-            .email("petja@mail.com")
-            .hashPassword("Pwerty007!")
+            .email("sascha@gmail.com")
+            .hashPassword("Sascha145$")
             .build();
 
     @Test

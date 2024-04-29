@@ -42,8 +42,8 @@ public class NewUserRATests extends TestBase{
                 .body(userNotValidFirstname)
                 .when()
                 .post("users/register")
-                .then();
-               // .assertThat().statusCode(409);
+                .then()
+                .assertThat().statusCode(409);
     }
 
     // Negatives Test NotValidLastname

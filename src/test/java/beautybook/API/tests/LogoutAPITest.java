@@ -10,7 +10,7 @@ public class LogoutAPITest extends TestBase{
 
                 .when()
                 .get("auth/logout")
-                .then();
-             //   .assertThat().statusCode(200);
+                .then()
+               .assertThat().statusCode(200);
     }
 }
