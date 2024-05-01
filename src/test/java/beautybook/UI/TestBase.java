@@ -19,7 +19,7 @@ public class TestBase {
     }
 
     @AfterMethod(enabled = false)
-    public void terDown() {
+    public void tearDown() {
         driver.quit();
     }
 }
