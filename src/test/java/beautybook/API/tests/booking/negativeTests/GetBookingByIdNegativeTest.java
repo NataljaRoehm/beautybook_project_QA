@@ -16,9 +16,9 @@ public class GetBookingByIdNegativeTest extends TestBase {
     public void createBookingWithValidationErrorsTest() {
 
         BookingDto bookingDto = BookingDto.builder()
-                .clientId(1)
-                .masterId(1)
-                .procedureId(0)
+                .clientId(30)
+                .masterId(2)
+                .procedureId(5)
                 .status("CONFIRMED")
                 .dateTime("2024-03-16T10:00:00")
                 .build();
@@ -33,7 +33,5 @@ public class GetBookingByIdNegativeTest extends TestBase {
                 .extract().response();
 
         Assert.assertThat(response.getStatusCode(), equalTo(400));
-
     }
-
 }

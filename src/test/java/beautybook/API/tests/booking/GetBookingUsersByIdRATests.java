@@ -11,7 +11,7 @@ public class GetBookingUsersByIdRATests extends TestBase {
     @Test
     public void getUserBookingsByStatusTest() {
 
-        long userId = 2;
+        long userId = 3;
         String status = "CONFIRMED";
 
         Response response = given()
@@ -23,9 +23,6 @@ public class GetBookingUsersByIdRATests extends TestBase {
         response.then().statusCode(200);
 
         response.then().body("bookingId", notNullValue());
-        // без статуса проверки*(с проверкой падает)
-       // response.then().body("status", hasItem(status));
-
         System.out.println("User " + userId + " bookings with status " + status + ":");
         response.prettyPrint();
     }

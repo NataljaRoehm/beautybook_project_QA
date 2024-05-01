@@ -28,7 +28,7 @@ public class DeleteBookingByIdRATest extends TestBase {
                 .when()
                 .post("/bookings")
                 .then()
-                //.assertThat().statusCode(201)
+                .assertThat().statusCode(201)
                 .extract().response();
 
         bookingId = response.jsonPath().getString("id");
@@ -38,7 +38,7 @@ public class DeleteBookingByIdRATest extends TestBase {
         given()
                 .when()
                 .delete("/bookings/" + bookingId)
-                .then();
-                //.statusCode(200);
+                .then()
+                .statusCode(200);
     }
 }
