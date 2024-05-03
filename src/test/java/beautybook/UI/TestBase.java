@@ -1,5 +1,6 @@
 package beautybook.UI;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -11,7 +12,7 @@ public class TestBase {
     WebDriver driver;
 
     @BeforeMethod
-    public void init() {
+    public void setUp() {
         driver = new ChromeDriver();
         driver.get("https://beaty-project-2-0-dwyu.vercel.app/");
         driver.manage().window().maximize();
@@ -21,5 +22,9 @@ public class TestBase {
     @AfterMethod(enabled = false)
     public void tearDown() {
         driver.quit();
+    }
+
+    public boolean isElementPresent(By locator) {
+        return driver.findElements(locator).size()>0;
     }
 }
