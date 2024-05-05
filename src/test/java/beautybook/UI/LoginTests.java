@@ -8,17 +8,25 @@ public class LoginTests extends TestBase{
 
     @BeforeMethod
     public void ensurePrecondition() {
-        if (!isLoginLinkPresent()){
-            clickOnSignOutButton();
+        if (!app.getUser().isLoginLinkPresent()){
+            app.getUser().clickOnSignOutButton();
         }
     }
     @Test
     public void loginPositiveTest() {
-        clickOnLoginLink();
-        fillLoginForm();
-        clickOnLoginButton();
+        app.getUser().clickOnLoginLink();
+        app.getUser().fillLoginForm();
+        app.getUser().clickOnLoginButton();
 
-        Assert.assertTrue(isSignOutButtonPresent());
+        Assert.assertTrue(app.getUser().isSignOutButtonPresent());
+
+    }@Test
+    public void loginNegativeTest() {
+        app.getUser().clickOnLoginLink();
+        app.getUser().fillLoginForm();
+        app.getUser().clickOnLoginButton();
+
+        Assert.assertTrue(app.getUser().isSignOutButtonPresent());
 
     }
 
