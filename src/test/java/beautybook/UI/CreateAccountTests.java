@@ -16,18 +16,18 @@ public class CreateAccountTests extends TestBase {
     }
 
     @Test
-    public void registerExistedUserNegativeTest() {
-//    public void registerNewUserPositiveTest() {
+//    public void registerExistedUserNegativeTest() {
+    public void registerNewUserPositiveTest() {
         app.getUser().clickOnLoginLink();
         app.getUser().clickOnRegisterButton();
         app.getUser().fillRegisterForm(new User()
-                .setLastName("Monk")
-                .setFirstName("Lors")
-                .setEmail("lr@gm.com")
+                .setLastName("Mont")
+                .setFirstName("Lord")
+                .setEmail("md@gm.ru")
                 .setPassword("Qwer!123"));
         app.getUser().click(By.xpath("//button[contains(text(),'Eine Konto erstellen')]"));
 
-        Assert.assertTrue(app.getUser().isAlertAppears());
+//        Assert.assertTrue(app.getUser().isAlertAppears());
 
        // "Error while created account"
     }

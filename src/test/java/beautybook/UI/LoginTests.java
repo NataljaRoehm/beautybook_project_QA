@@ -1,5 +1,7 @@
 package beautybook.UI;
 
+import beautybook.UI.pages.fw.ApplicationManager;
+import org.openqa.selenium.remote.Browser;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
