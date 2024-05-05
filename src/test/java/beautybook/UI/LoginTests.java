@@ -23,7 +23,7 @@ public class LoginTests extends TestBase{
         Assert.assertTrue(app.getUser().isSignOutButtonPresent());
 
     }@Test
-    public void loginNegativeTest() {
+    public void loginWithWrongEmailNegativeTest() {
         app.getUser().clickOnLoginLink();
         app.getUser().fillLoginForm();
         app.getUser().clickOnLoginButton();

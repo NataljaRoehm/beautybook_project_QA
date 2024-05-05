@@ -33,8 +33,8 @@ public class UserHelper extends BaseHelper {
     }
 
     public void fillLoginForm() {
-        type(By.cssSelector("[placeholder='name@example.com']"), "lm@gm.com");
-        type(By.cssSelector("[placeholder='Password']"), "Qwer!123");
+        type(By.cssSelector("[placeholder='name@example.com']"), "nm@gm.com");
+        type(By.cssSelector("[placeholder='Password']"), "Qwert!1234");
     }
 
     public void clickOnLoginButton() {
