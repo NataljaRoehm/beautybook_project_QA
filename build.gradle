@@ -31,6 +31,7 @@ task qa1(type:Test) {
             suites 'src/test/resources/testng.xml'
         }else if (suite2) {
             suites 'src/test/resources/regression.xml'
+
         }
 
         suites 'src/test/resources/testng.xml'

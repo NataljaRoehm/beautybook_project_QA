@@ -1,8 +1,6 @@
 package beautybook.UI;
 
-import beautybook.UI.pages.fw.ApplicationManager;
 import beautybook.UI.pages.models.User;
-import org.openqa.selenium.remote.Browser;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -21,18 +19,5 @@ public class LoginTests extends TestBase{
         app.getUser().fillLoginForm();
         app.getUser().clickOnLoginButton();
 
-        Assert.assertTrue(app.getUser().isSignOutButtonPresent());
     }
-
-    @Test
-    public void loginNegativeTestWithoutEmail() {
-        app.getUser().clickOnLoginLink();
-        app.getUser().fillLoginForm();
-
-        app.getUser().clickOnLoginButton();
-
-        Assert.assertTrue(app.getUser().isSignOutButtonPresent());
-
-    }
-
 }

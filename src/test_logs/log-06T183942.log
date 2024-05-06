@@ -1,0 +1,3 @@
+18:40:18.076 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- Start test registerExistedUserNegativeTest
+18:40:40.830 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- Start test isHomeComponentPresentTest
+18:40:50.874 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- Start test loginNegativeTestWithoutEmail
