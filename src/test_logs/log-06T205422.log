@@ -1,0 +1,6 @@
+20:54:24.703 INFO  org.testng.internal.Utils -%PARSER_ERROR[kvp]- [TestNG] Running:
+  C:\Users\remom\AppData\Local\JetBrains\IntelliJIdea2023.3\temp-testng-customsuite.xml
+
+20:54:32.872 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- Start test loginPositiveTest
+20:54:46.845 ERROR beautybook.UI.TestBase -%PARSER_ERROR[kvp]- FAILED: loginPositiveTest Screenshot: C:\Users\remom\IdeaProjects\beautybook_project_QA\screenshots\screen1715021686500.png
+20:54:46.846 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- ****************************************
