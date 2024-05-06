@@ -21,10 +21,10 @@ public class CreateAccountTests extends TestBase {
         app.getUser().clickOnLoginLink();
         app.getUser().clickOnRegisterButton();
         app.getUser().fillRegisterForm(new User()
-                .setLastName("Monk")
-                .setFirstName("Lors")
-                .setEmail("lr@gm.com")
-                .setPassword("Qwer!123"));
+                .setLastName("Nad")
+                .setFirstName("Man")
+                .setEmail("nm@gm.com")
+                .setPassword("Qwert!1234"));
         app.getUser().click(By.xpath("//button[contains(text(),'Eine Konto erstellen')]"));
 
         Assert.assertTrue(app.getUser().isAlertAppears());

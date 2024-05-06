@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Regression" verbose="1">
+    <test name="Regression">
+        <classes>
+            <class name="beautybook.UI.HomePageTests"/>
+            <class name="beautybook.UI.LoginTests">
+                <methods>
+                    <exclude name=".*Positive.*"/>
+                </methods>
+            </class>
+            <class name="beautybook.UI.CreateAccountTests">
+                <methods>
+                    <exclude name=".*From.*"/>
+                </methods>
+            </class>
+            <class name="beautybook.UI.CreateAccountTests"/>
+        </classes>
+    </test>
+</suite>

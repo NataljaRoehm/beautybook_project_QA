@@ -1,5 +1,7 @@
 package beautybook.UI;
 
+import beautybook.UI.pages.fw.ApplicationManager;
+import org.openqa.selenium.remote.Browser;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -21,7 +23,7 @@ public class LoginTests extends TestBase{
         Assert.assertTrue(app.getUser().isSignOutButtonPresent());
 
     }@Test
-    public void loginNegativeTest() {
+    public void loginWithWrongEmailNegativeTest() {
         app.getUser().clickOnLoginLink();
         app.getUser().fillLoginForm();
         app.getUser().clickOnLoginButton();
