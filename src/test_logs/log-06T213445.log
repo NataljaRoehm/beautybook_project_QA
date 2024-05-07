@@ -1,0 +1,9 @@
+21:34:47.450 INFO  org.testng.internal.Utils -%PARSER_ERROR[kvp]- [TestNG] Running:
+  C:\Users\remom\AppData\Local\JetBrains\IntelliJIdea2023.3\temp-testng-customsuite.xml
+
+21:34:54.035 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- Start test loginNegativeTestWithoutEmail
+21:34:56.109 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- Passed: loginNegativeTestWithoutEmail
+21:34:56.110 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- ****************************************
+21:34:56.124 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- Start test loginPositiveTest
+21:34:57.803 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- Passed: loginPositiveTest
+21:34:57.807 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- ****************************************

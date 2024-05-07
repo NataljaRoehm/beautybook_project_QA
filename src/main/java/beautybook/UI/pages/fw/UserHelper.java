@@ -45,4 +45,11 @@ public class UserHelper extends BaseHelper {
         return isElementPresent(By.xpath("//body/div[1]/div[1]/button[1]/*[1]"));
     }
 
+    public boolean isErrorAccountPresent() {
+        return isElementPresent(By.xpath("//*[.='Error while creating account']"));
+    }
+
+    public boolean isBookingConfirmationPresent(By xpath) {
+        return isBookingConfirmationPresent(By.xpath("//*[.='Booking confirmed']"));
+    }
 }

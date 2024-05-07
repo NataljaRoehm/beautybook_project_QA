@@ -1,0 +1,6 @@
+20:48:22.291 INFO  org.testng.internal.Utils -%PARSER_ERROR[kvp]- [TestNG] Running:
+  C:\Users\remom\AppData\Local\JetBrains\IntelliJIdea2023.3\temp-testng-customsuite.xml
+
+20:48:31.567 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- Start test createBookingPositiveTest
+20:48:34.407 ERROR beautybook.UI.TestBase -%PARSER_ERROR[kvp]- FAILED: createBookingPositiveTest Screenshot: C:\Users\remom\IdeaProjects\beautybook_project_QA\screenshots\screen1715021314325.png
+20:48:34.408 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- ****************************************
