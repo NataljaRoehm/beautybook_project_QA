@@ -19,7 +19,7 @@ public class CreateProcedureRATests extends TestBase {
                 .build();
 
         Response response = given()
-              //  .header(AUTH, token)
+                .header(AUTH, token)
                 .body(procedureDto)
                 .contentType(ContentType.JSON)
                 .when()

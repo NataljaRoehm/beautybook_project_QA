@@ -17,7 +17,7 @@ public class CreateCategoryNegativeTests extends TestBase {
         given()
                 .contentType(ContentType.JSON)
                 .when()
-                .get("/api/categories")
+                .get("/categories")
                 .then()
                 .assertThat()
                 .statusCode(404);

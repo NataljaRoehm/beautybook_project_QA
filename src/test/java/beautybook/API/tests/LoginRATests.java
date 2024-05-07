@@ -62,6 +62,6 @@ public class LoginRATests extends TestBase {
                 .when()
                 .post("auth/login")
                 .then()
-                .assertThat().statusCode(500);
+                .assertThat().statusCode(403);
     }
 }
