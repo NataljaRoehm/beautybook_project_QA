@@ -25,10 +25,11 @@ public class CreateAccountTests extends TestBase {
                 .setFirstName("Man")
                 .setEmail("nm@gm.com")
                 .setPassword("Qwert!1234"));
-        app.getUser().click(By.xpath("//button[contains(text(),'Eine Konto erstellen')]"));
+        app.getUser().click(By.xpath("//button[.='Eine Konto erstellen']"));
 
-        Assert.assertTrue(app.getUser().isAlertAppears());
 
-       // "Error while created account"
+        Assert.assertTrue(app.getUser().isErrorAccountPresent());
+
+
     }
 }

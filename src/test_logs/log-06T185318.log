@@ -1,0 +1,4 @@
+18:53:22.985 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- Start test loginNegativeTestWithoutEmail
+18:53:34.919 ERROR beautybook.UI.TestBase -%PARSER_ERROR[kvp]- FAILED: loginNegativeTestWithoutEmail Screenshot: C:\Users\remom\IdeaProjects\beautybook_project_QA\screenshots\screen1715014414873.png
+18:53:34.919 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- ****************************************
+18:53:34.922 INFO  beautybook.UI.TestBase -%PARSER_ERROR[kvp]- Start test loginPositiveTest
